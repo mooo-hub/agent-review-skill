@@ -41,22 +41,29 @@ F级 (<40分) → 完全不合格，退回重写
 
 ## 📦 安装使用
 
-```bash
-# 将 skill 复制到你的 Claude Code skills 目录
-cp -r agent-review ~/.claude/skills/
-🔧 使用方式
-/agent-review <skill-path>
 
-# 示例
+### 将 skill 复制到你的 Claude Code skills 目录
+```
+cp -r agent-review ~/.claude/skills/
+```
+### 🔧 使用方式
+```
+/agent-review <skill-path>
+```
+### 示例
+```
 /agent-review .claude/skills/my-skill/
-审查模式
+```
+## 审查模式
 模式	说明
 full	完整审查（默认）
 orchestrator	仅主Agent审查
 specialist	仅子Agent审查
 reporter	仅报告Agent审查
 reviewer	仅审查Agent审查
-📊 输出示例
+
+## 📊 输出示例
+```
 {
   "agent_review_report": {
     "overall_score": 82,
@@ -73,7 +80,9 @@ reviewer	仅审查Agent审查
   }
 }
 json
-🏗️ 架构设计
+```
+## 🏗️ 架构设计
+```
 用户请求
     │
     ▼
@@ -89,9 +98,10 @@ json
            │
            ▼
       审查报告
-🤝 适用场景
+```
+## 🤝 适用场景
 Agent开发者 - 发布前自检架构合规性
 团队负责人 - 审核团队成员提交的Agent设计
 框架维护者 - 确保贡献的Agent符合规范
-📜 许可证
+## 📜 许可证
 MIT License
